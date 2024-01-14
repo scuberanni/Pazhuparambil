@@ -1,0 +1,151 @@
+<section class="row">
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 pt-3">
+                                <div class="card rounded-2 w-100 " style="height: 150px;">
+                                    <img class="rounded-2 border border-2 border-white" style="height: 148px; "
+                                        src="images/FURNITURES/CORNER COVERING SETTY/SOFA (*).jpeg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                            </div>
+                        </section>
+
