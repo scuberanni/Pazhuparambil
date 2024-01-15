@@ -17,8 +17,8 @@ var swiper = new Swiper(".swiper", {
   },
  
   spaceBetween: 30,
-  loop: false,
-  slidesPerView: 1.1, // Set the same number of slides per view for all screen sizes
+  loop: true,
+  slidesPerView: 1.15, // Set the same number of slides per view for all screen sizes
   breakpoints: {
     640: {
       slidesPerView: 3
