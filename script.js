@@ -29,7 +29,7 @@ var swiper = new Swiper(".swiper", {
   }
 });
 
-swiper.slideTo(1, false, false);
+swiper.slideTo(3, false, false);
 
 
 
