@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <link rel="icon" href="images/html-logo.png" type="image/gif">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+
     <body class="bg-danger ">
         <header>
             <nav class="navbar navbar-expand-lg bg-warning fixed-top">
@@ -24,12 +27,9 @@
                 <div class="row px-2 ">
                     <div class="col-12 pt-5">
                         <section class="row ">
-                            
-                                <!-- Use a loop or dynamic content generation method to create columns -->
-                                <!-- For example, using JavaScript to dynamically generate content -->
-                                <script>
-                                    for (let i = 1; i <= 32; i++) {
-                                        document.write(`
+                            <script>
+                                for (let i = 1; i <= 32; i++) {
+                                    document.write(`
                                         
                                             <div class="col-12 col-md-3 pt-3">
                                                 <div class="neon-card" style="position: relative; height: 450px; overflow: hidden;">
@@ -50,26 +50,32 @@
                                                 </div>
                                             </div>
                                         `);
-                                    }
-                                </script>  
+                                }
+                            </script>
+                            <script>
+                                function openImage(imageUrl) {
+                                    window.open(imageUrl, '_blank');
+                                }
+                            </script>
                     </div>
                 </div>
             </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"></script>
-        <script>
-            function openImage(imageUrl) {
-                window.open(imageUrl, '_blank');
-            }
-        </script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                crossorigin="anonymous"></script>
+            <script>
+                function openImage(imageUrl) {
+                    window.open(imageUrl, '_blank');
+                }
+            </script>
     </body>
 </body>
+
 </html>

@@ -24,199 +24,38 @@
                 </div>
             </nav>
         </header>
-
         <section>
             <div class="container-fluid pt-3">
-                <div class="row px-2 " >
+                <div class="row px-2 ">
                     <div class="col-12 pt-5">
                         <section class="row">
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-card:hover " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (1).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-card:hover " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (2).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (3).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (4).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
+                            <script>
+                                for (let i = 1; i <= 22; i++) {
+                                    document.write(`
+                                            <div class="col-12 col-md-3 pt-3">
+                                                <div class="neon-card" style="position: relative; height: 300px; overflow: hidden;"
+                                                    <!-- Image as Background -->
+                                                    <img class="rounded-2 w-100"
+                                                        style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover;"
+                                                        src="images/FURNITURES/TV STAND/tv (${i}).jpeg"
+                                                        class="card-img-top" alt="...">
+                                                    <!-- Button Initially Hidden -->
+                                                    <button class="btn btn-secondary"
+                                                        onclick="openImage('images/FURNITURES/TV STAND/tv (${i}).jpeg')"
+                                                        style="position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%); z-index: 1; opacity: 100; transition: opacity 0.3s;">
+                                                        View image
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        `);
+                                }
+                            </script>
+                            <script>
+                                function openImage(imageUrl) {
+                                    window.open(imageUrl, '_blank');
+                                }
+                            </script>
                         </section>
-                        <section class="row">
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (5).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (6).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (7).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (8).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="row">
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (9).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (10).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (11).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (12).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="row">
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (13).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (14).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (15).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (16).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="row">
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (17).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (18).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (19).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (20).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="row">
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (21).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (22).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (23).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 pt-3">
-                                <div class="neon-card neon-CARD:HOVER " style="height: 300px;">
-                                    <img class="rounded-2 w-100" style="height: 298px; "
-                                        src="images/FURNITURES/TV STAND/tv (24).jpeg"
-                                        class="card-img-top" alt="...">
-                                </div>
-                            </div>
-                        </section>
-                        
-
-
-
-
-
-
-                        
                     </div>
                 </div>
             </div>
