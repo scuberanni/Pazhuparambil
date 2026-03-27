@@ -11,37 +11,48 @@
     <link rel="stylesheet" href="index.css">
     
     <style>
-        /* --- RESPONSIVE GRID SETTINGS --- */
-        /* Mobile Screen-il ulla height (Default) */
+        /* --- MAIN PAGE GRID --- */
         .neon-card {
             position: relative; 
-            height: 300px; /* Mobile-il height kurachu */
+            height: 300px; 
             overflow: hidden; 
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        /* Desktop Screen-il ulla height (768px-nu mukalil) */
         @media (min-width: 768px) {
             .neon-card {
                 height: 400px; 
             }
         }
 
-        /* --- FULL SCREEN SLIDER SETTINGS --- */
-        .carousel-item {
-            height: 100vh; 
+        /* --- MODAL BACKGROUND --- */
+        .modal-fullscreen .modal-content {
             background-color: #000000; 
+            border: none;
+        }
+
+        /* --- THE ULTIMATE SLIDER FIX (PC & Mobile) --- */
+        /* Bootstrap-ന്റെ ഡീഫോൾട്ട് ആനിമേഷൻ ബ്രേക്ക് ആവാതിരിക്കാൻ */
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            height: 100vh; 
+            height: 100dvh; 
+            background-color: #000000;
         }
         
         .carousel-item img {
-            height: 100%;
-            width: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            max-height: 100dvh;
             object-fit: contain; 
-            margin: auto;
         }
         
-        /* Mobile-il notch/status bar thattathirikkan 'safe-area' vechu close button set cheythu */
+        /* --- BUTTONS --- */
         .custom-close-btn {
             position: absolute;
             top: max(20px, env(safe-area-inset-top)); 
@@ -53,7 +64,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
 
-        /* Mobile-il prev/next arrow-kalude vellicham kurachu kannil adikkathirikkan */
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: rgba(0, 0, 0, 0.5);
@@ -77,10 +87,8 @@
         <div class="container-fluid pt-3">
             <div class="row px-2 ">
                 <div class="col-12 pt-5 mt-3">
-                    
                     <section class="row" id="gallery-grid">
                     </section>
-
                 </div>
             </div>
         </div>
@@ -92,7 +100,7 @@
                 
                 <button type="button" class="btn-close btn-close-dark custom-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
                 
-                <div class="modal-body p-0">
+                <div class="modal-body p-0 h-100">
                     <div id="galleryCarousel" class="carousel slide h-100" data-bs-touch="true">
                         <div class="carousel-inner h-100" id="carousel-items">
                             </div>
@@ -112,7 +120,6 @@
     </div>
 
     <script>
-        // IVIDE NINNU NUMBER MATTIYAL MATHI
         const totalImages = 55; 
         
         const galleryGrid = document.getElementById('gallery-grid');
@@ -124,7 +131,6 @@
         for (let i = 1; i <= totalImages; i++) {
             const imageUrl = `images/FURNITURES/TABLE&TEAPOY/TABLE (${i}).jpeg`;
 
-            // 1. Main Page Grid Design
             gridHTML += `
                 <div class="col-12 col-md-4 col-lg-3 pt-3"> 
                     <div class="neon-card">
@@ -137,10 +143,8 @@
                 </div>
             `;
 
-            // 2. Slider Design
-            let isActive = i === 1 ? 'active' : '';
             sliderHTML += `
-                <div class="carousel-item ${isActive}">
+                <div class="carousel-item">
                     <img src="${imageUrl}" loading="lazy" alt="Table ${i}">
                 </div>
             `;
@@ -149,10 +153,12 @@
         galleryGrid.innerHTML = gridHTML;
         carouselItems.innerHTML = sliderHTML;
 
+        // CLICK CHEYYUNNA IMAGE THANNE SLIDERIL VARAN ULLA CODE
         function openSlider(index) {
-            const myCarousel = document.querySelector('#galleryCarousel');
-            const carousel = bootstrap.Carousel.getOrCreateInstance(myCarousel);
-            carousel.to(index);
+            const items = document.querySelectorAll('.carousel-item');
+            
+            items.forEach(item => item.classList.remove('active'));
+            items[index].classList.add('active');
 
             const myModal = new bootstrap.Modal(document.getElementById('imageSliderModal'));
             myModal.show();
