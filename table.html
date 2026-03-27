@@ -26,49 +26,77 @@
             }
         }
 
-        /* --- MODAL BACKGROUND --- */
-        .modal-fullscreen .modal-content {
-            background-color: #000000; 
-            border: none;
+        /* --- പുതിയ CUSTOM LIGHTBOX (No Bootstrap Slider) --- */
+        #custom-lightbox {
+            display: none; /* ആദ്യമേ മറച്ചു വെക്കുന്നു */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh; /* മൊബൈൽ സ്ക്രീൻ ഫിറ്റ് ആവാൻ */
+            background-color: rgba(0, 0, 0, 0.95); /* കറുത്ത ബാക്ക്ഗ്രൗണ്ട് */
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* --- THE ULTIMATE SLIDER FIX (PC & Mobile) --- */
-        /* Bootstrap-ന്റെ ഡീഫോൾട്ട് ആനിമേഷൻ ബ്രേക്ക് ആവാതിരിക്കാൻ */
-        .carousel-item.active,
-        .carousel-item-next,
-        .carousel-item-prev {
-            display: flex;
-            align-items: start;
-            justify-content: start;
-            height: 100vh; 
-            height: 100dvh; 
-            background-color: #000000;
-        }
-        
-        .carousel-item img {
-            max-width: 100vw;
-            max-height: 100vh;
-            max-height: 100dvh;
+        /* ഇമേജ് ഒട്ടും കട്ട് ആവാതെ ഇരിക്കാൻ */
+        #custom-lightbox img {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain; 
         }
-        
-        /* --- BUTTONS --- */
-        .custom-close-btn {
+
+        /* Next, Prev, Close ബട്ടണുകളുടെ ഡിസൈൻ */
+        .lb-btn {
             position: absolute;
-            top: max(20px, env(safe-area-inset-top)); 
-            right: 20px;
-            z-index: 1055;
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 15px;
-            border-radius: 50%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .lb-btn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
         }
 
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: rgba(0, 0, 0, 0.5);
+        /* Close Button */
+        .lb-close {
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            padding: 20px;
+            font-size: 20px;
+        }
+
+        /* Previous Button */
+        .lb-prev {
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+        /* Next Button */
+        .lb-next {
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -94,40 +122,21 @@
         </div>
     </section>
 
-    <div class="modal fade" id="imageSliderModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen m-0">
-            <div class="modal-content bg-black border-0 rounded-0">
-                
-                <button type="button" class="btn-close btn-close-dark custom-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
-                
-                <div class="modal-body p-0 h-100">
-                    <div id="galleryCarousel" class="carousel slide h-100" data-bs-touch="true">
-                        <div class="carousel-inner h-100" id="carousel-items">
-                            </div>
-                        
-                        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 2.5rem; height: 2.5rem;"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true" style="width: 2.5rem; height: 2.5rem;"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="custom-lightbox">
+        <button class="lb-btn lb-close" onclick="closeLightbox()">X</button>
+        <button class="lb-btn lb-prev" onclick="prevImage()">&#10094;</button>
+        
+        <img id="lightbox-img" src="" alt="Gallery Image">
+        
+        <button class="lb-btn lb-next" onclick="nextImage()">&#10095;</button>
     </div>
 
     <script>
         const totalImages = 55; 
-        
         const galleryGrid = document.getElementById('gallery-grid');
-        const carouselItems = document.getElementById('carousel-items');
-
         let gridHTML = '';
-        let sliderHTML = '';
 
+        // 1. ഗാലറി ഇമേജുകൾ ലോഡ് ചെയ്യുന്നു
         for (let i = 1; i <= totalImages; i++) {
             const imageUrl = `images/FURNITURES/TABLE&TEAPOY/TABLE (${i}).jpeg`;
 
@@ -135,33 +144,49 @@
                 <div class="col-12 col-md-4 col-lg-3 pt-3"> 
                     <div class="neon-card">
                         <img class="rounded-3 w-100 h-100" style="object-fit: cover;" src="${imageUrl}" loading="lazy" alt="Table ${i}">
-                        <button class="btn btn-light btn-sm shadow" onclick="openSlider(${i - 1})"
+                        <button class="btn btn-light btn-sm shadow" onclick="openLightbox(${i})"
                             style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 1; font-weight: 600;">
                             View Image
                         </button>
                     </div>
                 </div>
             `;
+        }
+        galleryGrid.innerHTML = gridHTML;
 
-            sliderHTML += `
-                <div class="carousel-item">
-                    <img src="${imageUrl}" loading="lazy" alt="Table ${i}">
-                </div>
-            `;
+        // 2. LIGHTBOX CONTROLS (ഏത് ഇമേജ് വരണം എന്ന് തീരുമാനിക്കുന്ന കോഡ്)
+        let currentIndex = 1;
+
+        function openLightbox(index) {
+            currentIndex = index; // നമ്മൾ ക്ലിക്ക് ചെയ്ത നമ്പർ എടുക്കുന്നു
+            updateImage();
+            document.getElementById('custom-lightbox').style.display = 'flex'; // വ്യൂ ഓപ്പൺ ചെയ്യുന്നു
         }
 
-        galleryGrid.innerHTML = gridHTML;
-        carouselItems.innerHTML = sliderHTML;
+        function closeLightbox() {
+            document.getElementById('custom-lightbox').style.display = 'none'; // വ്യൂ ക്ലോസ് ചെയ്യുന്നു
+        }
 
-        // CLICK CHEYYUNNA IMAGE THANNE SLIDERIL VARAN ULLA CODE
-        function openSlider(index) {
-            const items = document.querySelectorAll('.carousel-item');
-            
-            items.forEach(item => item.classList.remove('active'));
-            items[index].classList.add('active');
+        function prevImage() {
+            currentIndex--;
+            if (currentIndex < 1) {
+                currentIndex = totalImages; // ഒന്നാമത്തെ ഇമേജിൽ നിന്നും back അടിച്ചാൽ അവസാനത്തെ ഇമേജ് വരും
+            }
+            updateImage();
+        }
 
-            const myModal = new bootstrap.Modal(document.getElementById('imageSliderModal'));
-            myModal.show();
+        function nextImage() {
+            currentIndex++;
+            if (currentIndex > totalImages) {
+                currentIndex = 1; // അവസാനത്തെ ഇമേജിൽ നിന്നും Next അടിച്ചാൽ ഒന്നാമത്തെ ഇമേജ് വരും
+            }
+            updateImage();
+        }
+
+        function updateImage() {
+            // ഇമേജ് മാറാനുള്ള ലിങ്ക് കൊടുക്കുന്നു
+            const imgElement = document.getElementById('lightbox-img');
+            imgElement.src = `images/FURNITURES/TABLE&TEAPOY/TABLE (${currentIndex}).jpeg`;
         }
     </script>
 
