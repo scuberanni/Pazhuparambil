@@ -5,73 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pazhuparambil Furniture Gallery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="images/html-logo.png" type="image/gif">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.css">
+    <style>
+        .neon-card { position: relative; height: 300px; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s; }
+        .neon-card:hover { transform: scale(1.02); }
+        @media (min-width: 768px) { .neon-card { height: 450px; } }
+        .view-btn { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 1; font-weight: 600; }
+        .pswp__button { background-color: rgba(0, 0, 0, 0.4) !important; border-radius: 10px; margin: 5px; }
+    </style>
 </head>
 
-<body>
-
-    <body class="bg-danger ">
-
-        <header>
-            <nav class="navbar navbar-expand-lg bg-warning fixed-top">
-                <div class="container-fluid ">
-                    <a class="navbar-brand" href="others.html">Back</a>
-
-                </div>
-                </div>
-            </nav>
-        </header>
-        <section>
-            <div class="container-fluid pt-3">
-                <div class="row px-2 ">
-                    <div class="col-12 pt-5">
-                        <section class="row">
-                            <scripT>
-                                for (let i = 1; i <= 9; i++) {
-                                    document.write(`
-                                            <div class="col-12 col-md-3 pt-3">
-                                                <div class="neon-card" style="position: relative; height: 450px; overflow: hidden;"
-                                                    <!-- Image as Background -->
-                                                    <img class="rounded-2 w-100"
-                                                        style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: ;"
-                                                        src="images/FURNITURES/OTHER/CORNER STAND/CORNER STAND (${i}).jpeg"
-                                                        class="card-img-top" alt="...">
-                                                    <!-- Button Initially Hidden -->
-                                                    <button class="btn btn-secondary"
-                                                        onclick="openImage('images/FURNITURES/OTHER/CORNER STAND/CORNER STAND (${i}).jpeg')"
-                                                        style="position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%); z-index: 1; opacity: 100; transition: opacity 0.3s;">
-                                                        View image
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        `);
-                                }
-                            </script>
-                            <script>
-                                function openImage(imageUrl) {
-                                    window.open(imageUrl, '_blank');
-                                }
-                            </script>
-                        </section>
-                    </div>
+<body class="bg-danger">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-warning fixed-top">
+            <div class="container-fluid "><a class="navbar-brand" href="others.html">Back</a></div>
+        </nav>
+    </header>
+    <section>
+        <div class="container-fluid pt-3">
+            <div class="row px-2 ">
+                <div class="col-12 pt-5 mt-3">
+                    <div class="row pswp-gallery" id="gallery-grid"></div>
                 </div>
             </div>
-        </section>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"></script>
-    </body>
-
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
+        import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.js';
+        const totalImages = 9; 
+        const galleryGrid = document.getElementById('gallery-grid');
+        let gridHTML = '';
+        for (let i = 1; i <= totalImages; i++) {
+            const imageUrl = `images/FURNITURES/OTHER/CORNER STAND/CORNER STAND (${i}).jpeg`;
+            gridHTML += `<div class="col-12 col-md-4 col-lg-3 pt-3"><div class="neon-card"><img class="rounded-3 w-100 h-100" style="object-fit: cover;" src="${imageUrl}" loading="lazy"><a href="${imageUrl}" data-pswp-width="1200" data-pswp-height="1600" class="btn btn-light btn-sm shadow view-btn">View Image</a></div></div>`;
+        }
+        galleryGrid.innerHTML = gridHTML;
+        const lightbox = new PhotoSwipeLightbox({ gallery: '#gallery-grid', children: 'a.view-btn', pswpModule: PhotoSwipe, bgOpacity: 0.95, loop: true });
+        lightbox.init();
+    </script>
 </body>
-
 </html>
